@@ -1,23 +1,28 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
+    <Header></Header>
+    <!-- <PostList></PostList> -->
+    <div class="main">
+      <router-view name="slidebar"></router-view>
+      <router-view name="main"></router-view>
+    </div>
+
   </div>
 </template>
 
 <script>
-import Header from'./components/Header'
+import Header from './components/Header'
 import PostList from './components/PostList'
 export default {
   name: 'App',
-  components:{
-    Header,PostList
+  components: {
+    Header, PostList
   }
 }
 </script>
 
 <style>
-.main{
+.main {
   width: 80%;
   margin: 0 auto;
 }

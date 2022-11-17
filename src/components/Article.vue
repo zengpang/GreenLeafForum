@@ -77,77 +77,84 @@
     }
   }
 </script>
-<style>
+<style >
   @import url('../assets/markdown-github.css');
-  .topbar{
-    padding:10px;
-    background-color: white;
+  .topbar {
+    padding: 10px;
+    background-color: #f6f6f6;
     height: 16px;
     font-size: 12px;
     margin-top: 10px;
   }
-  .article:not(:first-child)
-  {
+
+  .article:not(:first-child) {
     margin-right: 340px;
-    margin-top:15px;
-
-  }
-  #reply.topic_header{
-    background-color: white;
-
-  }
-  #reply{
     margin-top: 15px;
   }
-  #reply img{
+
+  #reply, .topic_header {
+    background-color: #fff;
+  }
+
+  #reply {
+    margin-top: 15px;
+  }
+
+  #reply img {
     width: 30px;
-    height:30px;
+    height: 30px;
     position: relative;
     bottom: -9px;
-
   }
-  #reply a,#reply span{
+
+  #reply a, #reply span {
     font-size: 13px;
-    color:#666;
+    color: #666;
     text-decoration: none;
   }
   .replySec{
-    border-bottom:1px solid  #e5e5e5;
+    border-bottom:1px solid #e5e5e5;
     padding:0 10px;
   }
-  .loading{
+
+  .loading {
     text-align: center;
     padding-top: 300px;
   }
-  .replyUp a:nth-of-type(2)
-  {
+
+  .replyUp a:nth-of-type(2) {
     margin-left: 0px;
     display: inline-block;
   }
-  .topic_header{
+
+  .topic_header {
     padding: 10px;
   }
-  .topic_title{
+
+  .topic_title {
     font-size: 20px;
     font-weight: bold;
     padding-top: 8px;
   }
-  .topic_header ul{
+
+  .topic_header ul {
     list-style: none;
-    padding:0px 0px;
-    margin:6px 6px;
+    padding: 0px 0px;
+    margin: 6px 0px;
   }
-  .topic_header li{
+
+  .topic_header li {
     display: inline-block;
     font-size: 12px;
     color: #838383;
   }
-  .topic_content{
+
+  .topic_content {
     border-top: 1px solid #e5e5e5;
     padding: 0 10px;
   }
-  .markdown-text img{
+
+  .markdown-text img {
     width: 92% !important;
   }
-
 </style>
