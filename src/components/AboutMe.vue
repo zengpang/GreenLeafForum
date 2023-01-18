@@ -1,6 +1,7 @@
 <template>
   <div class="AboutMe">
-     <p></p>
+     <p>作者邮箱：2516629927@qq.com</p>
+     <p>项目地址：https://github.com/zengpang/cnodeLite</p>
   </div>
 </template>
 <script>
