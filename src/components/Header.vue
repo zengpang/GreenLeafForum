@@ -22,8 +22,10 @@
 
 <style scoped>
 .header{
-  background-color:#5a5555 ;
+  background-color:#80BD01 ;
   height: 50px;
+  width: 100%;
+  box-shadow: 0 3px 6px rgb(0 0 0 / 4%);
 }
 img{
   max-width: 120px;
@@ -41,8 +43,9 @@ img{
   }
   a{
     text-decoration: none;
-    color: #ccc;
+    color: white;
     font-size: 14px;
+    font-weight: bolder;
     text-shadow: none;
   }
 </style>

@@ -22,8 +22,9 @@ export default {
 </script>
 
 <style>
+
 .main {
   width: 80%;
-  margin: 0 auto;
+  height: 100%;
 }
 </style>
