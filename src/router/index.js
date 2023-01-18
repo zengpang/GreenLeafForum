@@ -4,7 +4,7 @@ import Article from '../components/Article'
 import PostList from '../components/PostList'
 import UserInfo from '../components/UserInfo'
 import SlideBar from '../components/SlideBar'
-
+import AboutMe from '../components/AboutMe'
 Vue.use(Router)
 
 export default new Router({
@@ -29,6 +29,13 @@ export default new Router({
       path:'/userinfo/:name',
       components:{
         main:UserInfo
+      }
+    },
+    {
+      name:'about_me',
+      path:'/aboutme',
+      components:{
+        main:AboutMe
       }
     }
   ]
