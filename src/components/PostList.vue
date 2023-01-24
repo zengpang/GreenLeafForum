@@ -58,7 +58,7 @@ export default {
         return {
             isLoading: false,
             posts: [],//代表页面的列表数组
-            postpage: 1
+            postpage: 1 //当前页码
         }
     },
     components: {
@@ -69,7 +69,7 @@ export default {
             this.$http.get('https://cnodejs.org/api/v1/topics', {
                 params: {
                     page: this.postpage,
-                    limit: 20
+                    limit: 20 //每页数量
                 }
             }).then(res => {
                 this.isLoading = false;

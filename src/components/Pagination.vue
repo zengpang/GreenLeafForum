@@ -22,8 +22,9 @@ export default {
     },
     methods: {
         changeBtn(page) {
-            //点击上一页,下一页，首页
+            //如果形参page不为number类型则判断按钮为首页按钮，上一页按钮，下一页按钮
             if (typeof page != 'number') {
+                //通过按钮组件文本内容进行判断
                 switch (page.target.innerText) {
                     case '上一页':
                         $('button.currentPage').prev().click();
@@ -41,8 +42,10 @@ export default {
                 return;
             }
             this.currentPage=page;
+            //当页面数量大于4的时候
             if(page>4)
             {
+                //显示页码省略按钮
                 this.jduge=true;
             }else
             {
