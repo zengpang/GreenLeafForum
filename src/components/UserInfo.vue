@@ -35,6 +35,7 @@
 </template>
 <script>
    export default{
+     //用户信息
      name:'UserInfo',
      data(){
         return{

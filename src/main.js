@@ -4,7 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import Axios from 'axios'
-
+//将Axios注册为全局变量
 Vue.prototype.$http=Axios;
 Vue.config.productionTip = false
 
@@ -15,6 +15,7 @@ new Vue({
   components: { App },
   template: '<App/>'
 })
+//全局时间过滤器formatDate
 Vue.filter('formatDate',function(str){
   if(!str) return ''
   var date=new Date(str);
@@ -49,6 +50,7 @@ Vue.filter('formatDate',function(str){
     return parseInt(time / 31536000000) + '年前';
   }
 })
+//全局文章类型过滤器tabFormatter
 Vue.filter('tabFormatter',function(post){
   if(post.good==true)
   {
