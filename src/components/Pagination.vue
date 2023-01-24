@@ -23,31 +23,32 @@ export default {
     },
     methods: {
         changeBtn(page) {
+            if (page === '......') {
+                return;
+            }
             //如果形参page不为number类型则判断按钮为首页按钮，上一页按钮，下一页按钮
             if (typeof page != 'number') {
-                try {
-                    //通过按钮组件文本内容进行判断
-                    switch (page.target.innerText) {
-                        case '上一页':
-                            $('button.currentPage').prev().click();
-                            break;
-                        case '下一页':
-                            $('button.currentPage').next().click();
-                            break;
-                        case '首页':
-                            this.pagebtns = [1, 2, 3, 4, 5, '.....'];
-                            this.changeBtn(1);
-                            break;
-                        default:
-                            break;
-                    }
-                    return;
-                } catch (ex) {
-                    return;
-                } 
+
+                //通过按钮组件文本内容进行判断
+                switch (page.target.innerText) {
+                    case '上一页':
+                        $('button.currentPage').prev().click();
+                        break;
+                    case '下一页':
+                        $('button.currentPage').next().click();
+                        break;
+                    case '首页':
+                        this.pagebtns = [1, 2, 3, 4, 5, '.....'];
+                        this.changeBtn(1);
+                        break;
+                    default:
+                        break;
+                }
+                return;
+
             }
             this.currentPage = page;
-            //当页面数量大于4的时候
+            //当当前页面数量大于4的时候
             if (page > 4) {
                 //显示页码省略按钮
                 this.jduge = true;
