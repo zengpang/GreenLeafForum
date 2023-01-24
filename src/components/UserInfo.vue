@@ -12,7 +12,7 @@
                 {{userinfo.score}}积分
             </p>
             <p>
-                注册时间：{{userinfo.create_at|for}}
+                注册时间：{{userinfo.create_at|formatDate}}
             </p>
         </section>
         <div class="replies">
