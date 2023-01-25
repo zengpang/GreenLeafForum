@@ -52,6 +52,7 @@
     },
     methods:{
       getArticleData(){
+        //this.$route.params.id当前页面路由中的id属性值（即作者id）
         this.$http.get(`https://cnodejs.org/api/v1/topic/${this.$route.params.id}`)
         .then(res=>{
           if(res.data.success==true)
@@ -71,6 +72,7 @@
       this.getArticleData();
     },
     watch:{
+      //监听当前页面路由变化
       '$route'(to,from){
         this.getArticleData();
       }

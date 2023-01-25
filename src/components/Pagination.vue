@@ -3,6 +3,7 @@
         <button @click="changeBtn">首页</button>
         <button @click="changeBtn">上一页</button>
         <button v-if="jduge" class="pagebtn">......</button>
+        <!-- 页码按钮被点击时 -->
         <button v-for="btn in pagebtns" @click="changeBtn(btn)"
             :class="[{ currentPage: btn == currentPage }, 'pagebtn']">
             {{ btn }}
@@ -32,13 +33,17 @@ export default {
                 //通过按钮组件文本内容进行判断
                 switch (page.target.innerText) {
                     case '上一页':
+                        //触发当前页码按钮的上一个页码的按钮点击事件
                         $('button.currentPage').prev().click();
                         break;
                     case '下一页':
+                        //触发当前页码按钮的下一个页码的按钮点击事件
                         $('button.currentPage').next().click();
                         break;
                     case '首页':
+                        //重置pagebtns
                         this.pagebtns = [1, 2, 3, 4, 5, '.....'];
+                        //并调用changeBtn函数并传值1，使其跳转到页码为1的首页
                         this.changeBtn(1);
                         break;
                     default:
@@ -57,9 +62,9 @@ export default {
             }
             if (page == this.pagebtns[4]) {
                 this.pagebtns.shift();//移除第一个元素
-                this.pagebtns.splice(4, 0, this.pagebtns[3] + 1);//添加最后一个
+                this.pagebtns.splice(4, 0, this.pagebtns[3] + 1);//添加往数列末端添加一个页码元素，该页码元素为倒数第二个页码按钮的页码基础上再加1
             } else if (page == this.pagebtns[0] && page != 1) {
-                //先在第一个位置加一个
+                //先在第一个位置加一个页码元素，该页码元素为正数第二个页码按钮的页码基础上再加1
                 this.pagebtns.unshift(this.pagebtns[0] - 1);
                 //移除最后一个数字
                 this.pagebtns.splice(5, 1);
