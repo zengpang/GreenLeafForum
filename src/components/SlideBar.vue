@@ -56,6 +56,7 @@
      },
      methods:{
       getData(){
+        //this.$route.params.id当前页面路由中的name属性值（即作者名）
         this.$http.get(`https://cnodejs.org/api/v1/user/${this.$route.params.name}`)
         .then(res=>{
           this.isLoading=false;//加载成功，去除动画
